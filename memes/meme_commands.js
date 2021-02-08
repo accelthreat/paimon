@@ -128,13 +128,15 @@ module.exports = {
       name: "xiao",
       description: "A bunch of meme commands",
       execute(message, _) {
+        // Format: [image, title]
         let images = [
-          "https://imgur.com/g46z8mi.png",
+          ["https://imgur.com/g46z8mi.png", "Xiaomachurl"],
+          ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"]
         ];
-        const image = images[getRandomInt(images.length)];
+        let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
-          .setTitle("Xiaomachurl");
+          .setTitle(title);
         message.channel.send(embeddedMessage);
       },
     },
