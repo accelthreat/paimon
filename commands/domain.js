@@ -12,12 +12,19 @@ module.exports = {
     if(args.length === 0 || (args.length === 1 && args[0].toLowerCase() === "today")){
       var d = new Date();
       var currentDay = daysOfTheWeek[d.getDay()];
+
       message.channel.send(domainSchedules[currentDay].summary);
       //listSchedule(message, currentDay);
     } else if(args.length === 1 && args[0].toLowerCase() === "tomorrow"){
       var d = new Date();
-      var tomorrow = daysOfTheWeek[d.getDay() + 1];
+      var tomorrow = (d.getDay() === 6) ? daysOfTheWeek[0] : daysOfTheWeek[d.getDay() + 1];
+
       message.channel.send(domainSchedules[tomorrow].summary);
+    } else if(args.length === 1 && args[0].toLowerCase() === "yesterday"){
+      var d = new Date();
+      var yesterday = (d.getDay() === 0) ? daysOfTheWeek[6] : daysOfTheWeek[d.getDay() - 1];
+
+      message.channel.send(domainSchedules[yesterday].summary)
     } else if(args.length === 1 && daysOfTheWeek.includes(args[0].toLowerCase())){
       message.channel.send(domainSchedules[args[0].toLowerCase()].summary);
       //listSchedule(message, args[0].toLowerCase());
