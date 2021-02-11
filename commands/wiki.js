@@ -73,11 +73,25 @@ function capitalize(string) {
     "with",
     "within",
     "without",
+    "is",
   ];
 
   return word_exceptions.includes(string)
     ? string
     : string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function replace_html_characters(string) {
+  let html_exceptions = ["$", "&", "+", ",", "/", ":", ";", "=", "?", "@", "'"];
+
+  return string
+    .split("")
+    .map((letter) =>
+      html_exceptions.includes(letter)
+        ? "%" + letter.charCodeAt().toString(16).toUpperCase()
+        : letter
+    )
+    .join("");
 }
 
 module.exports = {
@@ -95,7 +109,10 @@ module.exports = {
         )}`
       );
     } else {
-      let cap = args.map((string) => capitalize(string)).join("_");
+      let cap = args
+        .map((string) => capitalize(string))
+        .map((string) => replace_html_characters(string))
+        .join("_");
       message.channel.send(`https://genshin-impact.fandom.com/wiki/${cap}`);
     }
   },
