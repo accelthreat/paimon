@@ -131,7 +131,8 @@ module.exports = {
         // Format: [image, title]
         let images = [
           ["https://imgur.com/g46z8mi.png", "Xiaomachurl"],
-          ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"]
+          ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"],
+          ["https://imgur.com/SPczhak.png", "Xiaomai Rice"]
         ];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
