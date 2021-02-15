@@ -84,6 +84,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -100,6 +101,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -116,6 +118,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -131,7 +134,8 @@ module.exports = {
         // Format: [image, title]
         let images = [
           ["https://imgur.com/g46z8mi.png", "Xiaomachurl"],
-          ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"]
+          ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"],
+          ["https://imgur.com/SPczhak.png", "Xiaomai Rice"]
         ];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
