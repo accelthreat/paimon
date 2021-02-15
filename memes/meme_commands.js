@@ -80,50 +80,38 @@ module.exports = {
       name: "hu",
       description: "A bunch of meme commands",
       execute(message, _) {
-        let images = [
-          "https://i.imgur.com/8sOXZs4.png",
-          "https://imgur.com/HuCegNK.png",
-          "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
-          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
+        let memeBundle = [
+          ["https://i.imgur.com/8sOXZs4.png", "Who tao", 31.73],
+          ["https://imgur.com/HuCegNK.png", "Who tao", 31.73],
+          [
+            "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+            "Who tao",
+            31.73,
+          ],
+          [
+            "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
+            "Come home",
+            1.6,
+          ],
+          [
+            "https://media1.tenor.com/images/dc73314354b09615c72b3e7b4346613b/tenor.gif",
+            "Sayonara",
+            1.6,
+          ],
+          [
+            "https://pbs.twimg.com/media/Etn3A9yXMAEQij-?format=jpg&name=large",
+            "Come home",
+            1.6,
+          ],
         ];
-        const image = images[getRandomInt(images.length)];
-        const embeddedMessage = new Discord.MessageEmbed()
+
+        let random_index = alias_sampler(memeBundle.map((arr) => arr[2]))();
+        let [image, title] = memeBundle[random_index];
+
+        let embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
-          .setTitle("Who tao?");
-        message.channel.send(embeddedMessage);
-      },
-    },
-    {
-      name: "tao",
-      description: "A bunch of meme commands",
-      execute(message, _) {
-        let images = [
-          "https://i.imgur.com/8sOXZs4.png",
-          "https://imgur.com/HuCegNK.png",
-          "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
-          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
-        ];
-        const image = images[getRandomInt(images.length)];
-        const embeddedMessage = new Discord.MessageEmbed()
-          .setImage(image)
-          .setTitle("Who tao?");
-        message.channel.send(embeddedMessage);
-      },
-    },
-    {
-      name: "who",
-      description: "A bunch of meme commands",
-      execute(message, _) {
-        let images = [
-          "https://i.imgur.com/8sOXZs4.png",
-          "https://imgur.com/HuCegNK.png",
-          "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
-          "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
-        ];
-        const image = images[getRandomInt(images.length)];
-        const embeddedMessage = new Discord.MessageEmbed()
-          .setImage(image)
-          .setTitle("Who tao?");
+          .setTitle(title);
+
         message.channel.send(embeddedMessage);
       },
     },
@@ -135,7 +123,7 @@ module.exports = {
         let images = [
           ["https://imgur.com/g46z8mi.png", "Xiaomachurl"],
           ["https://imgur.com/xGWq8ef.png", "Xiao Long Bao"],
-          ["https://imgur.com/SPczhak.png", "Xiaomai Rice"]
+          ["https://imgur.com/SPczhak.png", "Xiaomai Rice"],
         ];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
