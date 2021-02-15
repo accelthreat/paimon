@@ -84,6 +84,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media.tenor.com/images/98153671f5e5be610e95b3f41e482bbc/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -100,6 +101,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media.tenor.com/images/98153671f5e5be610e95b3f41e482bbc/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -116,6 +118,7 @@ module.exports = {
           "https://i.imgur.com/8sOXZs4.png",
           "https://imgur.com/HuCegNK.png",
           "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
+          "https://media.tenor.com/images/98153671f5e5be610e95b3f41e482bbc/tenor.gif",
         ];
         const image = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
