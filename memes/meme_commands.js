@@ -81,7 +81,7 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         let memeBundle = [
-          ["https://i.imgur.com/8sOXZs4.png", "Who tao", 31.73],
+          ["https://i.imgur.com/8sOXZs4.png", "Who tao", 31.13],
           ["https://imgur.com/HuCegNK.png", "Who tao", 31.73],
           [
             "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
@@ -103,6 +103,7 @@ module.exports = {
             "Come home",
             1.6,
           ],
+          ["https://i.redd.it/gofamdij6r661.png", "Come home", 0.6],
         ];
 
         let random_index = alias_sampler(memeBundle.map((arr) => arr[2]))();
